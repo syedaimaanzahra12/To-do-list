@@ -5,7 +5,7 @@ let condition = true;
 while (condition) {
   let addTask = await inquirer.prompt([
     {
-      name: "toDos",
+      name: "firstQuestion",
       type: "input",
       message: "What would you like to add to your TO-DOs?",
     },
@@ -13,11 +13,11 @@ while (condition) {
       name: "addMore",
       type: "confirm",
       message: "Would you like to add more?",
-      default: "false",
+      default: "true",
     },
   ]
 );
-  todos.push(addTask.toDos),
+  todos.push(addTask.firstQuestion),
   condition=addTask.addMore
   console.log(todos)
 
